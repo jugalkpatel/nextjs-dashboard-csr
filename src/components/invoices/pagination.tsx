@@ -2,7 +2,7 @@
 
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { generatePagination } from "@/lib/utils";
 
 export default function Pagination({ totalPages }: { totalPages: number }) {
@@ -77,7 +77,7 @@ function PaginationNumber({
   return isActive || position === "middle" ? (
     <div className={className}>{page}</div>
   ) : (
-    <Link href={href} className={className}>
+    <Link to={href} className={className}>
       {page}
     </Link>
   );
@@ -112,7 +112,7 @@ function PaginationArrow({
   return isDisabled ? (
     <div className={className}>{icon}</div>
   ) : (
-    <Link className={className} href={href}>
+    <Link className={className} to={href}>
       {icon}
     </Link>
   );

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { UpdateInvoice, DeleteInvoice } from "@/components/invoices/buttons";
 import InvoiceStatus from "@/components/invoices/status";
 import { formatDateToLocal, formatCurrency } from "@/lib/utils";
@@ -26,7 +25,7 @@ export default async function InvoicesTable({
                 <div className="flex items-center justify-between border-b pb-4">
                   <div>
                     <div className="mb-2 flex items-center">
-                      <Image
+                      <img
                         src={invoice.image_url}
                         className="mr-2 rounded-full"
                         width={28}
@@ -85,7 +84,7 @@ export default async function InvoicesTable({
                 >
                   <td className="whitespace-nowrap py-3 pl-6 pr-3">
                     <div className="flex items-center gap-3">
-                      <Image
+                      <img
                         src={invoice.image_url}
                         className="rounded-full"
                         width={28}
